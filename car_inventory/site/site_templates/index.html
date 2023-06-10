@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container ">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat,msg in messages %}
+                <div class="alert alert-success">
+                    {{ msg }}
+                    <button type="button" class="close"  data-dismiss = "alert" onclick="window.location.reload();" >&times;</button>
+                    <!-- Couldn't figure out how to get the box to close, so we're doing a cheeky reload instead -->
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="col-12 " id="home">
+    <img src="../../static/images/jose-carbajal-8xyki0bqvgw-unsplash.jpg" alt="A car" class="background col-12 carousel">
+    <h1 class="carousel-caption text-white textInImg"> Find your dream car here</h1>
+</div>
+
+
+<div class="bg-dark">
+    
+    <div class="container pt-5">
+            <div class="d-md-flex bg-dark align-items-center justify-content-between  ">
+                
+                <div class="col-lg-7 col-md-9 px-lg-2 px-md-1  col-sm-12 py-5 gy-2"> 
+                    <h1 class="shadow-lg text-white ">Our company uses API routing. Use a program like insomnia to view our 'extensive' postgres inventory, holding all your inventory needs.
+                        <br>
+                        -Mr. Ceo
+                    </h1>
+                </div>
+                <img src="../../static/images/undraw_electric_car_b-7-hl.svg" alt="Dude with camera in forest" class="img-fluid col-lg-3 col-md-2 col-sm-12 py-5 shadow-lg">
+            </div>
+    </div>
+</div>
+
+
+<section id="gallery" class=" text-center text-sm-start shadow-lg bg-dark">
+    <div class="container p-5 bg-dark">
+        <h2 class="text-center p-5 text-light">Some cars that are[n't] in our inventory </h2>
+        <div class="row g-5  justify-content-between">
+            <div class="col-12 col-md-5 col-lg-3">
+                <img src="../../static/images/sven-d-a4S6KUuLeoM-unsplash.jpg" alt="White SUV on path-road in desert ish area" class="img-fluid shadow-lg p-0">
+            </div>
+            <div class="col-12 col-md-5 col-lg-3">
+                <img src="../../static/images/joey-banks-YApiWyp0lqo-unsplash.jpg" alt="Black sleek car on runway" class="img-fluid shadow-lg p-0">
+            </div>
+            <div class="col-12 col-md-5 col-lg-3">
+                <img src="../../static/images/hyundai-motor-group-a3vDd8hzuYs-unsplash.jpg" alt="White sleek van with fancy recharge station" class="img-fluid shadow-lg p-0">
+            </div>
+            <div class="col-12 col-md-5 col-lg-3">
+                <img src="../../static/images/grahame-jenkins-p7tai9P7H-s-unsplash.jpg" alt="Blue car by sidewalk" class="img-fluid shadow-lg p-0">
+            </div>
+            <div class="col-12 col-md-5 col-lg-3">
+                <img src="../../static/images/erik-mclean-ZRns2R5azu0-unsplash.jpg" alt="White car on country road" class="img-fluid shadow-lg p-0">
+            </div>
+            <div class="col-12 col-md-5 col-lg-3">
+                <img src="../../static/images/campbell-3ZUsNJhi_Ik-unsplash.jpg" alt="Black car on freeway" class="img-fluid shadow-lg p-0">
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<footer>        
+    <div class=" text-light text-center p-2"> © Jonathan Baker 2023, but not actually, I didn't  actually pay the copyright people, however that works. </div>
+</footer>
+
+{% endblock content %}

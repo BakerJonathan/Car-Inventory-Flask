@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<br><br>
+<h1 class="text-center">Your profile:</h1>
+<u1 class="list-group">
+    <li class="list-group-item text-center">Email: {{current_user.email}}</li>
+    <li class="list-group-item text-center">Token: {{current_user.token}}</li>
+</u1>
+{% endblock content %}

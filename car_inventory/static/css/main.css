@@ -1,0 +1,47 @@
+*,*:before,*::after{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: inherit; 
+    /* border: 1px solid red; */
+  }
+
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+body {
+  padding-top: 48px;
+}
+
+.navbar-dark, footer{
+  background-color: black !important ;
+  /* Make navbar a little distinct from other bg-darks, as I'll use that a fair bit */
+}
+
+.err-box{
+  border: 2px;
+  border-color: rgb(0, 0, 0);
+  background-color: rgb(218, 160, 160);
+  border-radius: 2px;
+}
+
+/* for home page top image */
+.textInImg{
+  position: static;
+  transform: translateY(-350%);
+  margin-bottom: -13%;
+}
+@media(min-width: 700px){
+  .textInImg {font-size:40px}
+}
+@media(min-width: 1100px){
+  .textInImg {font-size:60px}
+}
+@media(min-width: 1300px){
+  .textInImg {font-size:85px}
+}
+@media(min-width: 1700px){
+  .textInImg {font-size:110px}
+}
+
